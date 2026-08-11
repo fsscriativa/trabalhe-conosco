@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo Seletivo - Kaskita Sorveteria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink-bg: #e60067;
+            --pink-dark: #c40057;
+            --pink-light: #ffebf3;
+            --yellow-accent: #ffe600;
+            --yellow-hover: #ebd300;
+            --text-dark: #2d3748;
+            --text-muted: #718096;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--pink-bg);
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: var(--white);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            text-align: center;
+        }
+
+        /* Moldura do Logo KASKITA */
+        .brand-card {
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            padding: 25px 20px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--white);
+            line-height: 1;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .brand-subtitle {
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--white);
+            margin-top: 8px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        /* Tag Processo Seletivo */
+        .tag {
+            display: inline-block;
+            background-color: var(--yellow-accent);
+            color: #1a1a1a;
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 8px 22px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        /* Card Principal */
+        .notice-card {
+            background-color: var(--white);
+            color: var(--text-dark);
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .notice-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--yellow-accent), var(--pink-bg));
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background-color: var(--pink-light);
+            color: var(--pink-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+        }
+
+        .notice-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--pink-bg);
+            margin-bottom: 15px;
+        }
+
+        .notice-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #4a5568;
+            margin-bottom: 25px;
+        }
+
+        .highlight-box {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--yellow-accent);
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-top: 10px;
+        }
+
+        .highlight-box strong {
+            color: var(--pink-bg);
+        }
+
+        /* Rodapé */
+        .footer {
+            margin-top: 35px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .footer a {
+            color: var(--yellow-accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 480px) {
+            .brand-title {
+                font-size: 2.2rem;
+            }
+            .notice-card {
+                padding: 30px 20px;
+            }
+            .notice-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Logo Header -->
+        <div class="brand-card">
+            <h1 class="brand-title">KASKITA</h1>
+            <p class="brand-subtitle">SORVETERIA</p>
+        </div>
+
+        <!-- Tag -->
+        <div class="tag">Processo Seletivo</div>
+
+        <!-- Card de Aviso -->
+        <div class="notice-card">
+            <div class="icon-box">📌</div>
+            <h2 class="notice-title">Inscrições encerradas!</h2>
+            <p class="notice-text">
+                Agradecemos o interesse de todos em fazer parte da equipe de atendimento da <strong>Sorveteria Kaskita</strong>.
+            </p>
+            <div class="highlight-box">
+                <strong>Próximos Passos:</strong> Em breve entraremos em contato com os selecionados para a próxima fase do processo seletivo. Fique atento ao seu telefone e e-mail!
+            </div>
+        </div>
+
+        <!-- Rodapé Atualizado -->
+        <div class="footer">
+            Kaskita – A dose diária de alegria tem nome.<br>
+            <a href="https://fsscriativa.github.io/onepage/" target="_blank" rel="noopener noreferrer">&copy; FSSCriativa.</a>
+        </div>
+    </div>
+
+</body>
+</html>
